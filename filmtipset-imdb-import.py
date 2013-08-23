@@ -88,7 +88,7 @@ def vote(accesskey, userkey, filmtipset_id, imdb_rating):
     if response.getcode() != 200:
         raise Exception("HTTP response != 200") 
     
-    # vote action returns the move information, just as the imdb action.
+    # vote action returns the movie information, just as the imdb action.
     # to validate the response was ok, try to get the id of the movie.
     jsonData = json.loads(unicode(response.read(), "ISO-8859-1"))
     jsonData[0]["data"][0]["movie"]["id"]
